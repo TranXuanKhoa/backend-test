@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "scores",
+  "info": {
+    "name": "score"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "value": {
+      "type": "biginteger",
+      "required": true
+    },
+    "accounts": {
+      "collection": "account",
+      "via": "scores",
+      "dominant": true
+    }
+  }
+}
